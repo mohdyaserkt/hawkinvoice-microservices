@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'services/invoice/*'
+      - 'services/invoice/**'
 
 jobs:
   build-and-deploy:

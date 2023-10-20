@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'services/customer/*'
+      - 'services/customer/**'
 
 jobs:
   build-and-deploy:
