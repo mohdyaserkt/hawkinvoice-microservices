@@ -5,11 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'services/customer'
+      - 'services/customer/*'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
@@ -26,3 +27,13 @@ jobs:
       - name: Push Docker image to Docker Hub
         run: docker push yaserkt786/customer
 
+      - name: Authenticate with DigitalOcean
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Set Kubernetes Context
+        run: doctl kubernetes cluster kubeconfig save hawkinvoice
+
+      - name: Restart Customer Deployment
+        run: kubectl rollout restart deployment customer-depl
