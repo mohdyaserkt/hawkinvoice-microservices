@@ -1,0 +1,28 @@
+name: deploy-customer
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'services/customer'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Build the Docker image
+        run: |
+          cd services/customer
+          docker build -t yaserkt786/customer .
+        working-directory: services/customer
+
+      - name: Log in to Docker Hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Push Docker image to Docker Hub
+        run: docker push yaserkt786/customer
+
