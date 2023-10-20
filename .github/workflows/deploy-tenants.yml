@@ -16,10 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build the Docker image
-        run: |
-          cd services/tenants
-          docker build -t yaserkt786/tenants .
-        working-directory: services/tenants
+        run: cd services/tenants && docker build -t yaserkt786/tenants .  
 
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}

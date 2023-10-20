@@ -16,10 +16,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build the Docker image
-        run: |
-          cd services/organization
-          docker build -t yaserkt786/organization .
-        working-directory: services/organization
+        run: cd services/organization && docker build -t yaserkt786/organization .  
+        
 
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}

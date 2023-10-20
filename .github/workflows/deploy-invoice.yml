@@ -16,10 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build the Docker image
-        run: |
-          cd services/invoice
-          docker build -t yaserkt786/invoice .
-        working-directory: services/invoice
+        run: cd services/invoice && docker build -t yaserkt786/invoice .  
 
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
