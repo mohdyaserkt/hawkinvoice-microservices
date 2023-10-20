@@ -16,10 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build the Docker image
-        run: |
-          cd services/customer
-          docker build -t yaserkt786/customer .
-        working-directory: services/customer
+        run: cd services/customer && docker build -t yaserkt786/customer .
 
       - name: Log in to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
