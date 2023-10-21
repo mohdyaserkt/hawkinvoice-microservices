@@ -12,7 +12,7 @@ const start = async () => {
 
   try {
 
-    await natsWrapper.connect("ecom", "333", "http://nats-srv:4222");
+    await natsWrapper.connect("ecom", "customerclientid", "http://nats-srv:4222");
 
     natsWrapper.client.on("close", () => {
       console.log("NATS connetion closed!");

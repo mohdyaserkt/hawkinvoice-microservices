@@ -14,7 +14,7 @@ const start = async () => {
 
   try {
 
-    await natsWrapper.connect("ecom", "7865", "http://nats-srv:4222");
+    await natsWrapper.connect("ecom", "invoiceclientid", "http://nats-srv:4222");
 
     natsWrapper.client.on("close", () => {
       console.log("NATS connetion closed!");
