@@ -6,7 +6,7 @@ import {
   organizationRegistrationData,
 } from "../../entities/organization";
 
-export const createOrganization_UseCase = (dependencies: DepenteniciesData) => {
+export const getOrganizationAddress_UseCase = (dependencies: DepenteniciesData) => {
   const {
     repository: { organizationRepository,tenantRepository },
   } = dependencies;
