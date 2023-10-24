@@ -12,7 +12,7 @@ export = (dependencies: DepenteniciesData) => {
 
 
   router.post("/create-organization", createOrganizationController);
-  router.post("/get-organization-address", getOrganizationAdressController);
+  router.get("/get-organization-address", getOrganizationAdressController);
 
   
 
