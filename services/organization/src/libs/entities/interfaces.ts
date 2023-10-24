@@ -30,6 +30,7 @@ export interface useCaseData {
   };
 
   createOrganization_UseCase: any;
+  getOrganizationAddress_UseCase:any;
 
   findMyTenants_UseCase: any;
   createTenant_UseCase: any;

@@ -9,14 +9,14 @@ import {
   verifyUser_UseCase,
   findMyTenants_UseCase,
   createOrganization_UseCase,
+  getOrganizationAddress_UseCase,
 } from "../libs/usecases";
 
 const useCases = {
   signupUser_UseCase,
   createTenant_UseCase,
-
   verifyUser_UseCase,
-
+  getOrganizationAddress_UseCase,
   findMyTenants_UseCase,
   createOrganization_UseCase,
 };
