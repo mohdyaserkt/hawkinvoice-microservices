@@ -7,11 +7,12 @@ import { DepenteniciesData } from "../libs/entities/interfaces";
 
 export = (dependencies: DepenteniciesData) => {
   const router = express.Router();
-  const {createOrganizationController } =
+  const {createOrganizationController ,getOrganizationAdressController} =
   organizationController(dependencies);
 
 
   router.post("/create-organization", createOrganizationController);
+  router.post("/get-organization-address", getOrganizationAdressController);
 
   
 
