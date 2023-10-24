@@ -19,4 +19,12 @@ export const organizationRepository = {
     const createdOrganization = await organizationModel.create(Organization);
     return createdOrganization.toObject();
   },
+
+  findOrganizationAddress: async (organizationModel:any) => {
+    
+    
+    const organizations = await organizationModel.findOne({})
+    console.log(organizations,"dfs");
+    return organizations ? organizations : null;
+  },
 };
