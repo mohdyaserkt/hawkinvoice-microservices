@@ -1,10 +1,6 @@
 
 import { DepenteniciesData } from "../../entities/interfaces";
-import bcrypt from "bcrypt";
-import {
-  IOrganization,
-  organizationRegistrationData,
-} from "../../entities/organization";
+
 
 export const getOrganizationAddress_UseCase = (dependencies: DepenteniciesData) => {
   const {
