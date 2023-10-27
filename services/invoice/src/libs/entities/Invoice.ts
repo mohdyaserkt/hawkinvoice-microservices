@@ -67,8 +67,10 @@ export interface Invoice {
     termsAndConditions?: string;
     status?: string;
     paymentMode?: string;
+    id?:string;
   
     constructor(data: Invoice) {
+      this.id = data.id || '';
       this.customerName = data.customerName || '';
       this.customerEmail = data.customerEmail || '';
       this.invoiceNumber = data.invoiceNumber || '';
