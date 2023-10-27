@@ -1,3 +1,12 @@
+interface ShippingAddress {
+  attention: string;
+  region: string;
+  street1: string;
+  street2: string;
+  city: string;
+  state: string;
+}
+
 export interface ICustomer {
   id?:string
   customerType: string;
@@ -9,7 +18,11 @@ export interface ICustomer {
   salutaion?: String;
   customerCompanyName?: String;
   mobile?: Number;
+  shippingAddress?:ShippingAddress;
+  billingAddress?:ShippingAddress;
 }
+
+
 
 export class cutomerRegistrationData {
   displayName: string;
@@ -21,6 +34,8 @@ export class cutomerRegistrationData {
   customerCompanyName?: String;
   mobile?: Number;
   salutaion?: String;
+  billingAddress?:ShippingAddress;
+  shippingAddress?:ShippingAddress;
   id?:string
 
   constructor({
@@ -33,7 +48,7 @@ export class cutomerRegistrationData {
     customerCompanyName,
     mobile,
     salutaion,
-    id
+    id,shippingAddress,billingAddress
   }: ICustomer) {
     this.displayName = displayName;
     this.firstName = firstName;
@@ -45,5 +60,7 @@ export class cutomerRegistrationData {
     this.mobile = mobile;
     this.salutaion = salutaion;
     this.id=id
+    this.shippingAddress=shippingAddress;
+    this.billingAddress=billingAddress;
   }
 }

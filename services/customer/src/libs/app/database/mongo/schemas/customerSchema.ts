@@ -1,21 +1,26 @@
 import mongoose from "mongoose";
 
- const customerSchema = new mongoose.Schema(
+const customerSchema = new mongoose.Schema(
   {
-    customerType : {
+    customerType: {
       type: String,
       required: true,
     },
-    salutaion:{
-      type:String
+    salutaion: {
+      type: String,
     },
-    customerCompanyName:{
-      type:String
+    customerCompanyName: {
+      type: String,
     },
-    mobile:{
-      type:Number
+    mobile: {
+      type: Number,
     },
-
+    billingAddress: {
+      type: Object,
+    },
+    shippingAddress: {
+      type: Object,
+    },
 
     firstName: {
       type: String,
@@ -56,7 +61,5 @@ import mongoose from "mongoose";
     },
   }
 );
-
-
 
 export { customerSchema };

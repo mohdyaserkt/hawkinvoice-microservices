@@ -20,9 +20,10 @@ lastName,
 workPhone,
 customerCompanyName,
 mobile,
-salutaion
+salutaion,billingAddress,shippingAddress
 
   }: ICustomer,comapanyName:string) => {
+    console.log(shippingAddress,billingAddress,"ship of company in usecase ");
     
 
     const customerData = new cutomerRegistrationData({
@@ -34,8 +35,13 @@ salutaion
       customerType,
       customerCompanyName,
       mobile,
-      salutaion
+      salutaion,
+      billingAddress,
+      shippingAddress
+
     });
+    console.log(customerData,"rd data alklll of company in ");
+
     const model = await tenantRepository.getCompanySchema(comapanyName,"Customers")
     return customerRepository.createCustomer(customerData,model);
   };

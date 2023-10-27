@@ -23,6 +23,9 @@ export = (dependencies: DepenteniciesData): any => {
         customerCompanyName,
         mobile,
         salutaion,
+        shippingAddress,
+        billingAddress
+
       } = req.body;
       const companyName:string =  req.headers['currentorganization'] as string;
       
@@ -39,6 +42,8 @@ export = (dependencies: DepenteniciesData): any => {
           customerCompanyName,
           mobile,
           salutaion,
+          shippingAddress,
+          billingAddress
         },
         companyName
       );

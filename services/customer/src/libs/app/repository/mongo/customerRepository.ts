@@ -32,8 +32,10 @@ export const customerRepository = {
     return customers ? customers : null;
   },
 
-  createCustomer: async (customer: ICustomer, organizationModel: any) => {
-    const createdCustomer = await organizationModel.create(customer);
+  createCustomer: async (customer: ICustomer, customerModel: any) => {
+    console.log("this is my customer",customer);
+    
+    const createdCustomer = await customerModel.create(customer);
     return createdCustomer.toObject();
   },
 };
