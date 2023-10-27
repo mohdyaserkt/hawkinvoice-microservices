@@ -24,13 +24,12 @@ export = (dependencies: DepenteniciesData): any => {
         mobile,
         salutaion,
         shippingAddress,
-        billingAddress
-
+        billingAddress,
       } = req.body;
-      const companyName:string =  req.headers['currentorganization'] as string;
-      
-      console.log(companyName,"name of company in ");
-      
+      const companyName: string = req.headers["currentorganization"] as string;
+
+      console.log(companyName, "name of company in ");
+
       const customer = await createCustomer_UseCase(dependencies).execute(
         {
           displayName,
@@ -43,11 +42,16 @@ export = (dependencies: DepenteniciesData): any => {
           mobile,
           salutaion,
           shippingAddress,
-          billingAddress
+          billingAddress,
         },
         companyName
       );
-await new customerCreatedPublisher(natsWrapper.client).publish({customer,companyName});
+
+      await new customerCreatedPublisher(natsWrapper.client).publish({
+        customer,
+        companyName,
+      });
+
       res
         .status(201)
         .json({ message: "customer Created Succesfully ", customer });
@@ -63,5 +67,3 @@ await new customerCreatedPublisher(natsWrapper.client).publish({customer,company
   };
   return createCustomer;
 };
-
-
