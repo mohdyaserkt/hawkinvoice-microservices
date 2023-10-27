@@ -70,7 +70,7 @@ export interface Invoice {
     id?:string;
   
     constructor(data: Invoice) {
-      this.id = data.id || '';
+      this.id = data.id;
       this.customerName = data.customerName || '';
       this.customerEmail = data.customerEmail || '';
       this.invoiceNumber = data.invoiceNumber || '';
