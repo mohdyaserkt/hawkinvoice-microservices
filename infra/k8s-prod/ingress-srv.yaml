@@ -45,4 +45,5 @@ spec:
           #       name: client1-srv
           #       port:
           #         number: 3000
+          #         number: 3000
           
