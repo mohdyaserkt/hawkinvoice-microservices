@@ -8,20 +8,10 @@ import depentencies from "./config/dependencies";
 const app = express();
 app.set("trust-proxy", true);
 app.use(json());
-const corsOpts = {
-  origin: '*',
-
-  methods: [
-    'GET',
-    'POST',
-  ],
-
-  allowedHeaders: [
-    'Content-Type',
-  ],
-};
-
-app.use(cors(corsOpts));
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://hawkinvoice-client.vercel.app'],
+  methods: ['GET', 'POST']
+}));
 
 
 app.use(
