@@ -8,10 +8,7 @@ import cors from "cors"
 const app = express();
 app.set("trust-proxy", true);
 app.use(json());
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://hawkinvoice-client.vercel.app',],
-  methods: ['GET', 'POST']
-}));
+
 app.use(
   cookieSession({
     signed: false,

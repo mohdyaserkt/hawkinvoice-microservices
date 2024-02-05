@@ -22,7 +22,6 @@
     "@y48er-invoices/common": "^2.0.4",
     "bcrypt": "^5.1.1",
     "cookie-session": "^2.0.0",
-    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "mongoose": "^7.4.3",
     "node-nats-streaming": "^0.3.2",

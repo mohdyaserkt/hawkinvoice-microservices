@@ -5,6 +5,8 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "https://hawkinvoice-client.vercel.app"
 spec:
   rules:
     - host: "server.hawkinvoice.online"
@@ -37,7 +39,7 @@ spec:
               service:
                 name: invoice-srv
                 port:
-                  number: 4000                
+                  number: 4000
           # - path: /?(.*)
           #   pathType: Prefix
           #   backend:
@@ -47,4 +49,3 @@ spec:
           #         number: 3000
           #         number: 3000
           #check
-          
