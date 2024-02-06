@@ -30,7 +30,7 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
       - name: Set Kubernetes Context
-        run: doctl kubernetes cluster kubeconfig save hawkinvoice
+        run: doctl kubernetes cluster kubeconfig save hawkinvoicemicroservice
 
       - name: Restart invoice Deployment
         run: kubectl rollout restart deployment invoice-depl

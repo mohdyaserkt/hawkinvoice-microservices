@@ -21,7 +21,7 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
       - name: Set Kubernetes Context
-        run: doctl kubernetes cluster kubeconfig save hawkinvoicemicroservice
+        run: doctl kubernetes cluster kubeconfig save hawkinvoicemicroservicemicroservice
 
       - name: Apply Kubernetes Manifests
         run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
