@@ -43,12 +43,3 @@ spec:
                 name: invoice-srv
                 port:
                   number: 4000
-          # - path: /?(.*)
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: client1-srv
-          #       port:
-          #         number: 3000
-          #         number: 3000
-          #checksss
