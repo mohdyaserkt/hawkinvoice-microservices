@@ -20,5 +20,5 @@ app.use(
 app.use("/api", routes(depentencies));
 
 export { app };
-  // #chekck
+  // #chekcks
     
