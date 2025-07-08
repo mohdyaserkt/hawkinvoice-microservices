@@ -1,12 +1,20 @@
-# 🚀 HawkInvoice - Modern Invoice Management Platform
+# 🚀 HawkInvoice - Multi-tenant SaaS for Invoice Management
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/your-org/hawkinvoice/ci-cd.yml?branch=main)](https://github.com/your-org/hawkinvoice/actions)
 [![codecov](https://codecov.io/gh/your-org/hawkinvoice/branch/main/graph/badge.svg)](https://codecov.io/gh/your-org/hawkinvoice)
 
+## 🖥 Frontend
+
+The frontend application for HawkInvoice is built with Next.js.
+
+- **Repository**: [Frontend Repo](https://github.com/mohdyaserkt/hawkinvoice-client)
+
+
 ## 📋 Overview
 
 HawkInvoice is a scalable, cloud-native SaaS platform designed to streamline invoice management, financial tracking, and business operations for organizations of all sizes. Built with a microservices architecture, it ensures high scalability, maintainability, and performance while adhering to Clean Architecture and SOLID principles.
+
 
 ## 🌟 Features
 
@@ -40,33 +48,33 @@ hawkinvoice/
 
 ### 1. Customer Service
 Manages customer data, interactions, and relationships.
-- **Tech Stack**: Node.js, TypeScript, NestJS
+- **Tech Stack**: Node.js, TypeScript, 
 - **Database**: MongoDB
 - **API**: REST & gRPC
 
 ### 2. Invoice Service
 Handles the complete invoice lifecycle.
-- **Tech Stack**: Node.js, TypeScript, NestJS
-- **Database**: PostgreSQL
+- **Tech Stack**: Node.js, TypeScript
+- **Database**: MongoDB
 - **Features**: PDF generation, email notifications
 
 ### 3. Organization Service
 Manages organization settings and users.
-- **Tech Stack**: Node.js, TypeScript, NestJS
-- **Database**: PostgreSQL
+- **Tech Stack**: Node.js, TypeScript
+- **Database**: MongoDB
 - **Features**: User management, role-based access
 
 ### 4. Tenants Service
 Handles multi-tenancy and tenant isolation.
-- **Tech Stack**: Node.js, TypeScript, NestJS
-- **Database**: PostgreSQL
+- **Tech Stack**: Node.js, TypeScript, 
+- **Database**: MongoDB
 
 ## 🛠 Infrastructure
 
 ### Kubernetes
 - **Development**: Local development with Minikube
 - **Production**: Managed Kubernetes (EKS/GKE/AKS)
-- **Service Mesh**: Istio for service-to-service communication
+- **Message Broker**: NATS
 - **Ingress**: Nginx Ingress Controller
 
 ### CI/CD
@@ -89,7 +97,7 @@ Handles multi-tenancy and tenant isolation.
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-org/hawkinvoice.git
-   cd hawkinvoice
+   cd hawkinvoice-microservices
    ```
 
 2. **Start development environment**
@@ -135,10 +143,7 @@ kubectl apply -k ./infra/k8s-prod
 
 ## 📚 Documentation
 
-- [API Documentation](https://docs.hawkinvoice.com/api)
-- [Architecture Decision Records](./docs/adr/README.md)
-- [Development Guide](./docs/development.md)
-- [Deployment Guide](./docs/deployment.md)
+- [API Documentation](https://app.swaggerhub.com/apis-docs/YASERKT786/hawk-invoice_api/1.0.0)
 
 ## 🤝 Contributing
 
@@ -150,11 +155,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Email**: support@hawkinvoice.com
+- **Email**: mail.hawkinvoice@gmail.com
 - **Twitter**: [@hawkinvoice](https://twitter.com/hawkinvoice)
-- **Website**: https://hawkinvoice.com
+- **Website**: https://hawkinvoice.online
 
 ## 🙏 Acknowledgments
 
-- Built with ❤️ by the HawkInvoice team.
-- Special thanks to all our contributors.
+- Built with ❤️ by Mohd Yassar.
