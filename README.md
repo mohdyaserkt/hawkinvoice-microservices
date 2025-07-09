@@ -10,6 +10,12 @@ The frontend application for HawkInvoice is built with Next.js.
 
 - **Repository**: [Frontend Repo](https://github.com/mohdyaserkt/hawkinvoice-client)
 
+## 🧱 System Architecture
+
+Below is a high-level overview of the HawkInvoice architecture.
+
+![HawkInvoice Architecture Sketch](assets/system.png)
+
 
 ## 📋 Overview
 
